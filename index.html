@@ -108,38 +108,61 @@
         <p>Evaluación clínica, diagnóstico y tratamiento de patologías frecuentes y complejas del aparato locomotor.</p>
       </div>
       <div class="cards-grid">
-        <article class="service-card">
+        <article class="service-card" role="button" tabindex="0" aria-expanded="false" data-gallery="images/artrosis-1.png,images/artrosis-2.png">
           <span class="icon" aria-hidden="true"><i class="fa-solid fa-bone"></i></span>
+          <span class="service-card-toggle" aria-hidden="true">+</span>
           <h3>Artrosis de cadera y rodilla</h3>
           <p>Diagnóstico y tratamiento del desgaste articular, con abordajes conservadores o quirúrgicos según cada caso.</p>
         </article>
-        <article class="service-card">
+        <article class="service-card" role="button" tabindex="0" aria-expanded="false" data-gallery="images/cirugia-1.png,images/cirugia-2.png">
           <span class="icon" aria-hidden="true"><i class="fa-solid fa-user-doctor"></i></span>
+          <span class="service-card-toggle" aria-hidden="true">+</span>
           <h3>Cirugía reconstructiva</h3>
           <p>Procedimientos de cadera y rodilla orientados a recuperar movilidad, aliviar dolor y mejorar la función.</p>
         </article>
-        <article class="service-card">
+        <article class="service-card" role="button" tabindex="0" aria-expanded="false" data-gallery="images/fracturas-1.png,images/fracturas-2.png">
           <span class="icon" aria-hidden="true"><i class="fa-solid fa-kit-medical"></i></span>
+          <span class="service-card-toggle" aria-hidden="true">+</span>
           <h3>Fracturas y osteosíntesis</h3>
           <p>Tratamiento de fracturas de cadera y del aparato locomotor con seguimiento especializado.</p>
         </article>
-        <article class="service-card">
+        <article class="service-card" role="button" tabindex="0" aria-expanded="false" data-gallery="images/displasia-1.png,images/displasia-2.png">
           <span class="icon" aria-hidden="true"><i class="fa-solid fa-person-walking"></i></span>
+          <span class="service-card-toggle" aria-hidden="true">+</span>
           <h3>Displasia de cadera</h3>
           <p>Cirugía conservadora y reconstructiva articular para preservar o restaurar la mecánica de la cadera.</p>
         </article>
-        <article class="service-card">
+        <article class="service-card" role="button" tabindex="0" aria-expanded="false" data-gallery="images/medicina-regenerativa-1.png,images/medicina-regenerativa-2.png">
           <span class="icon" aria-hidden="true"><i class="fa-solid fa-droplet"></i></span>
+          <span class="service-card-toggle" aria-hidden="true">+</span>
           <h3>Medicina regenerativa</h3>
           <p>Alternativas terapéuticas para patologías musculoesqueléticas seleccionadas y dolor miofascial.</p>
         </article>
-        <article class="service-card">
+        <article class="service-card" role="button" tabindex="0" aria-expanded="false" data-gallery="images/dolor-columna-1.png,images/dolor-columna-2.png">
           <span class="icon" aria-hidden="true"><i class="fa-solid fa-notes-medical"></i></span>
+          <span class="service-card-toggle" aria-hidden="true">+</span>
           <h3>Dolor cervical, dorsal y lumbar</h3>
           <p>Abordaje del dolor de columna y lesiones relacionadas con postura, actividad física o sobrecarga.</p>
         </article>
       </div>
     </section>
+
+    <div class="service-modal" aria-hidden="true">
+      <div class="service-modal-backdrop"></div>
+      <div class="service-modal-panel" role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
+        <button type="button" class="service-modal-close" aria-label="Cerrar galería">×</button>
+        <div class="service-modal-header">
+          <h2 id="service-modal-title"></h2>
+          <span class="service-modal-counter"></span>
+        </div>
+        <div class="service-carousel">
+          <button type="button" class="carousel-control prev" aria-label="Imagen anterior">‹</button>
+          <div class="carousel-track"></div>
+          <button type="button" class="carousel-control next" aria-label="Siguiente imagen">›</button>
+        </div>
+        <div class="service-gallery-thumbs"></div>
+      </div>
+    </div>
 
     <section class="section appointments" id="turnos">
       <div class="appointment-copy">

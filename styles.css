@@ -531,6 +531,26 @@ h3 {
   padding: 0 22px 22px;
 }
 
+.accordion-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.accordion-media img {
+  width: min(420px, 100%);
+  max-width: 320px;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  background: var(--white);
+  border: 5px solid rgba(29, 139, 215, 0.18);
+  box-shadow: 0 10px 24px rgba(8, 48, 95, 0.08);
+  object-fit: cover;
+}
+
 .accordion-item.is-open .accordion-content {
   display: block;
 }

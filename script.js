@@ -106,7 +106,11 @@ modal.addEventListener("keydown", (event) => {
 
 serviceCards.forEach((card) => {
   const toggle = card.querySelector(".service-card-toggle");
-  const galleryData = card.dataset.gallery ? card.dataset.gallery.split(",") : [];
+  const galleryData = card.dataset.gallery
+    ? card.dataset.gallery
+        .split(",")
+        .map((image) => `images/especialidades/${image.trim()}`)
+    : [];
   const title = card.querySelector("h3").textContent;
 
   const setOpen = (open) => {

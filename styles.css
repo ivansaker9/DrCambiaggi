@@ -155,25 +155,35 @@ a {
   padding: 70px 0;
 }
 
+main {
+  overflow-x: clip;
+}
+
 .hero {
-  /*min-height: calc(100vh - 76px);*/
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 1.16fr) minmax(300px, 0.62fr);
   align-items: center;
   gap: 54px;
   padding-top: 80px;
-  padding-bottom: 0px;
+  padding-bottom: 56px;
 }
 
+/* Fondo a todo el ancho que acompaña la altura real del hero y se funde en blanco abajo */
 .hero::before {
   content: "";
   position: absolute;
-  inset: 76px 0 auto;
-  height: 580px;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 50vw);
+  width: 100vw;
   z-index: -1;
   background:
-    linear-gradient(120deg, rgba(234, 245, 255, 0.96), rgba(255, 255, 255, 0.75)),
-    radial-gradient(circle at 88% 18%, rgba(29, 139, 215, 0.18), transparent 34%);
+    radial-gradient(circle at 85% 20%, rgba(29, 139, 215, 0.16), transparent 40%),
+    linear-gradient(120deg, #d9ebfb, #eaf5ff 55%, #f5fbff);
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
+  mask-image: linear-gradient(to bottom, #000 70%, transparent);
 }
 
 .eyebrow {
@@ -971,7 +981,8 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-top: 38px;
+    gap: 36px;
+    padding: 38px 0 48px;
   }
 
   .hero-card {
